@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+  
+    <meta charset="utf-8">
+
+    <title>Max's assignment4</title>
+
+    </head>
+
+<body>
+
+    <form action="#" method="post">
+
+        4 times 25 equals to ?    <input type="text" name="first" id="first" />
+
+        <input type="submit" value="send" onclick="check();"/>
+
+    </form>
+
+    <script language="javascript" type="text/javascript">
+        function check(){
+
+            var f=document.getElementById("first").value;
+
+            if(f==100)
+                {   //If f is equal to 100
+
+                    alert(f+" is correct! You did a good job!");
+
+
+                }
+            else
+                {                
+            if(f=="")
+            {   //if there is nothing in the input box
+
+                alert("Please enter a number!");
+
+                return;
+
+            }
+
+            if(f!==100)
+            {   //If f is not equal to 100
+
+                alert(f+" is wrong! Please try again!");
+
+            }
+
+}
+
+}
+</script>
+</body>
+
+</html>
