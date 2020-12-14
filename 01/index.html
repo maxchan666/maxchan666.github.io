@@ -334,52 +334,6 @@
 
 
 
-
-
-
- <!-- 为 ECharts 准备一个具备大小（宽高），id为'main'的 DOM -->
-
-
- <div style="height: 650px; width: 1000px; margin: 0 auto;">
- <div id="main1" style="height:550px;width: 850px; margin:0 auto"></div>
- </div>
-<script>
-
- var myChart1 = echarts.init(document.getElementById('main1'));
- option1 = {
- // 加载 bmap 组件
- bmap: {
-     // 百度地图中心经纬度 -- 西安
-     center: [114.07, 22.56],
-     // 百度地图缩放
-     zoom: 12,
-     // 是否开启拖拽缩放，可以只设置 'scale' 或者 'move'
-     roam: true,
-     // 百度地图的自定义样式，见 http://developer.baidu.com/map/jsdevelop-11.htm
-     mapStyle: {}
-     
- },
-   tooltip: {},
- series: [{
-     type: 'scatter',
-     // 使用百度地图坐标系
-     coordinateSystem: 'bmap',
-     // 数据格式跟在 geo 坐标系上一样，每一项都是 [经度，纬度，数值大小，其它维度...]（在深圳上加一个点）
-     data:[[114.07,22.63,44],[114.06,22.54,44],[113.90,22.59,44]],
-   
- 
-     symbolSize: function (val) {
-             return val[2];
-         },
-         
- }]
-}
-
-myChart1.setOption(option1);
-
-</script>
-
-
 <div class="container-fluid fh5co_footer_right_reserved">
     <div class="container">
         <div class="row  ">
